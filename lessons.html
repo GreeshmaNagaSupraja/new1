@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Lessons</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="enrollments.html">Enrollments</a></li>
+                <li><a href="lessons.html">Lessons</a></li>
+                <li><a href="assignments.html">Assignments</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Lesson List</h2>
+        <table id="lesson-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Lesson Title</th>
+                    <th>Course ID</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be populated here using JavaScript -->
+            </tbody>
+        </table>
+        <button onclick="showAddLessonForm()">Add Lesson</button>
+        
+        <div id="add-lesson-form" style="display:none;">
+            <h3>Add New Lesson</h3>
+            <form onsubmit="addLesson(event)">
+                <label for="lesson-title">Lesson Title:</label>
+                <input type="text" id="lesson-title" required>
+                <label for="course-id">Course ID:</label>
+                <input type="text" id="course-id" required>
+                <div class="button-group">
+                    <button type="submit">Add Lesson</button>
+                    <button type="button" onclick="hideAddLessonForm()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

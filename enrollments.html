@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollments</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Enrollments</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="enrollments.html">Enrollments</a></li>
+                <li><a href="lessons.html">Lessons</a></li>
+                <li><a href="assignments.html">Assignments</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Enrollment List</h2>
+        <table id="enrollment-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Student ID</th>
+                    <th>Course ID</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be populated here using JavaScript -->
+            </tbody>
+        </table>
+        <button onclick="showAddEnrollmentForm()">Add Enrollment</button>
+        
+        <div id="add-enrollment-form" style="display:none;">
+            <h3>Add New Enrollment</h3>
+            <form onsubmit="addEnrollment(event)">
+                <label for="student-id">Student ID:</label>
+                <input type="text" id="student-id" required>
+                <label for="course-id">Course ID:</label>
+                <input type="text" id="course-id" required>
+                <div class="button-group">
+                    <button type="submit">Add Enrollment</button>
+                    <button type="button" onclick="hideAddEnrollmentForm()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
